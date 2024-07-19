@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "dayconutr",
+	"version": "${version}",
+	"name": "DayConutr",
+	"description": "Counts Days",
+	"authors": [
+		"MrPugPug"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/dayconutr/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dayconutr.dayconutr.DayConutr"
+		],
+		"client": [
+			"dayconutr.dayconutr.DayConutrClient"
+		]
+	},
+	"mixins": [
+		"dayconutr.mixins.json",
+		{
+			"config": "dayconutr.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
