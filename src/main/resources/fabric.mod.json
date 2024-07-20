@@ -3,13 +3,13 @@
 	"id": "dayconutr",
 	"version": "${version}",
 	"name": "DayConutr",
-	"description": "Counts Days",
+	"description": "Counts Days and puts it on the screen",
 	"authors": [
 		"MrPugPug"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/day-countr",
+		"sources": "https://github.com/thepugmaker/Day-Countr-Mod"
 	},
 	"license": "MIT",
 	"icon": "assets/dayconutr/icon.png",

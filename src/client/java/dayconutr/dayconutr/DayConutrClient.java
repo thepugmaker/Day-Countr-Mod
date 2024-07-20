@@ -29,11 +29,12 @@ public class DayConutrClient implements ClientModInitializer {
 			int screenHeight = MC.getWindow().getScaledHeight();
 
 			// Put on left bottom corner
-			int x = 10;
+			int x = 35;
 			int y = screenHeight - 35;
 
 			// Render the text with the Day on it
 			drawContext.drawTextWithShadow(MC.textRenderer, "Day: " + day, x, y, 0xFFFFFF);
+
 		}
 	}
 }
