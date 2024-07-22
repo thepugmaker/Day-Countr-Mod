@@ -21,7 +21,7 @@ public class DayConutrClient implements ClientModInitializer {
 	private void onHudRender(DrawContext drawContext) {
 		MinecraftClient MC = MinecraftClient.getInstance();
 		if (MC.player != null && MC.world != null) {
-			// Get current day
+			// Get current day and add one to it
 			long day = MC.world.getTimeOfDay() / 24000L + 1;
 
 			// Get screen width and height
@@ -29,8 +29,8 @@ public class DayConutrClient implements ClientModInitializer {
 			int screenHeight = MC.getWindow().getScaledHeight();
 
 			// Put on left bottom corner
-			int x = 35;
-			int y = screenHeight - 35;
+			int x = 12;
+			int y = screenHeight - 15;
 
 			// Render the text with the Day on it
 			drawContext.drawTextWithShadow(MC.textRenderer, "Day: " + day, x, y, 0xFFFFFF);

@@ -9,7 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/day-countr",
-		"sources": "https://github.com/thepugmaker/Day-Countr-Mod"
+		"sources": "https://github.com/thepugmaker/Day-Countr-Mod",
+		"issues": "https://github.com/thepugmaker/Day-Countr-Mod/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/dayconutr/icon.png",
