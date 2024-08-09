@@ -1,5 +1,8 @@
 package dayconutr.dayconutr;
 
+import dayconutr.dayconutr.config.ModConfig;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.ConfigData;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
@@ -8,16 +11,27 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DayConutrClient implements ClientModInitializer {
+	// Logger thing
 	public static final Logger LOGGER = LoggerFactory.getLogger("day-countr");
 
+	// Calls this on start of the mod 
 	@Override
 	public void onInitializeClient() {
+		// Logs some info
 		LOGGER.info("[DayConutr]:Hello Fabric world!");
 		LOGGER.info("[DayConutr]:Welcome Day Countr to the Mods!");
 
+		// Register HudRender
 		HudRenderCallback.EVENT.register((drawContext, tickDelta) -> onHudRender(drawContext));
+
+		// Register AutoConfig
+		// AutoConfig.register(ModConfig.class, JanksonConfigSerializer::new);
+
+		// Read the config
+		// ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 	}
 
+	// We register this from up there ^
 	private void onHudRender(DrawContext drawContext) {
 		MinecraftClient MC = MinecraftClient.getInstance();
 		if (MC.player != null && MC.world != null) {

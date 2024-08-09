@@ -3,7 +3,7 @@
 	"id": "dayconutr",
 	"version": "${version}",
 	"name": "DayConutr",
-	"description": "Counts Days and puts it on the screen",
+	"description": "Counts Ingame days and displays it on the screen while ingame",
 	"authors": [
 		"MrPugPug"
 	],
@@ -34,9 +34,9 @@
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
 	},
 	"suggests": {
 		"another-mod": "*"
-	}
+	},
 }

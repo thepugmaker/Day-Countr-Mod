@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ExampleClientMixin {
 	@Inject(at = @At("HEAD"), method = "run")
 	private void init(CallbackInfo info) {
-		// This code is injected into the start of MinecraftClient.run()V
+		// Fabric: This code is injected into the start of MinecraftClient.run()
+		// MrPugPug: Probably won't need this to be edited
 	}
 }
