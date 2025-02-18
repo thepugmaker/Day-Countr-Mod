@@ -10,6 +10,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ExampleMixin {
 	@Inject(at = @At("HEAD"), method = "loadWorld")
 	private void init(CallbackInfo info) {
-		// This code is injected into the start of MinecraftServer.loadWorld()V
+		// This code is injected into the start of MinecraftServer.loadWorld()
+
+		// Are Mixins needed needed for this project?
+		// No, so why am I leaving this script here?
+		// Cause mixins might help in a future update
 	}
 }

@@ -10,7 +10,7 @@ public class DayConutr implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("[DayConutr]:This is a unused script");
+		// LOGGER.info("[DayConutr]:This is a unused script");
 		// Do I plan to use this script?
 		// No not at all unless I need to in the config menu I will work on
 	}

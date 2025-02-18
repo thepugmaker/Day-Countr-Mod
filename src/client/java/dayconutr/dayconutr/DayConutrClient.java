@@ -8,29 +8,35 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DayConutrClient implements ClientModInitializer {
+	// Logger thing
 	public static final Logger LOGGER = LoggerFactory.getLogger("day-countr");
 
+	// Calls this on start of the mod
 	@Override
 	public void onInitializeClient() {
-		LOGGER.info("[DayConutr]:Hello Fabric world!");
-		LOGGER.info("[DayConutr]:Welcome Day Countr to the Mods!");
+		// Logs some info
+		LOGGER.info("[DayConutr]:Starting up");
+		LOGGER.info("[DayCountr]:Waiting for player to be ingame...");
 
+		// Register HudRender
 		HudRenderCallback.EVENT.register((drawContext, tickDelta) -> onHudRender(drawContext));
 	}
 
+	// We register this from up there ^
 	private void onHudRender(DrawContext drawContext) {
 		MinecraftClient MC = MinecraftClient.getInstance();
 		if (MC.player != null && MC.world != null) {
-			// Get current day
+			// Get current day and add one to it
 			long day = MC.world.getTimeOfDay() / 24000L + 1;
+			LOGGER.info("[DayCountr]:Day is: " + day);
 
 			// Get screen width and height
 			int screenWidth = MC.getWindow().getScaledWidth();
 			int screenHeight = MC.getWindow().getScaledHeight();
 
 			// Put on left bottom corner
-			int x = 35;
-			int y = screenHeight - 35;
+			int x = 12;
+			int y = screenHeight - 15;
 
 			// Render the text with the Day on it
 			drawContext.drawTextWithShadow(MC.textRenderer, "Day: " + day, x, y, 0xFFFFFF);
