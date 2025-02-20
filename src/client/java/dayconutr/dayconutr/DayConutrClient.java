@@ -28,7 +28,6 @@ public class DayConutrClient implements ClientModInitializer {
 		if (MC.player != null && MC.world != null) {
 			// Get current day and add one to it
 			long day = MC.world.getTimeOfDay() / 24000L + 1;
-			LOGGER.info("[DayCountr]:Day is: " + day);
 
 			// Get screen width and height
 			int screenWidth = MC.getWindow().getScaledWidth();
